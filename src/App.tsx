@@ -1,8 +1,12 @@
+import WordAnalitycs from "./pages/WordAnalitycs"
+
 function App() {
 
-  return (
-    <>empty</>
-  )
+    return (
+        <>
+            <WordAnalitycs />
+        </>
+    )
 }
 
 export default App
