@@ -1,11 +1,11 @@
-import Background from "./Background";
+import BackgroundImage from "./BackgroundImage";
 
 export default function Header() {
-    return (
-        <header>
-            <Background />
-            Header
-        </header>
-    )
+  return (
+    <header>
+      <BackgroundImage />
+      Header
+    </header>
+  )
 }
 
