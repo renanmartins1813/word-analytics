@@ -1,6 +1,12 @@
+import Stats from "./Stats";
+import TextArea from "./TextArea";
+
 export default function Container() {
     return (
-        <main>Container</main>
+        <main className="container">
+            <TextArea />
+            <Stats />
+        </main>
     )
 }
 
