@@ -1,8 +1,12 @@
 import { useState } from "react";
 import Warning from "./Warning";
 
-export default function TextArea() {
-    const [text, setText] = useState("");
+type TextAreaProps = {
+    text: string,
+    setText: React.Dispatch<React.SetStateAction<string>>
+}
+
+export default function TextArea({ text, setText }: TextAreaProps) {
     const [warningText, setWarningText] = useState("");
 
     function handleChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
@@ -22,6 +26,7 @@ export default function TextArea() {
 
         return setText(newText);
     }
+
     return (
         <div className="textarea" >
             <textarea
@@ -32,7 +37,6 @@ export default function TextArea() {
             />
             {warningText ? <Warning warningText={warningText} /> : null}
         </div>
-
     )
 }
 
