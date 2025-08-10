@@ -16,7 +16,7 @@ export default function Container() {
     return (
         <main className="container">
             <TextArea text={text} setText={setText} />
-            <Stats stats={stats} />
+            <Stats {...stats} />
         </main>
     )
 }

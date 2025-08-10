@@ -3,13 +3,11 @@ type StatProps = {
     label: string
 }
 
-interface IStatsProps {
-    stats: {
-        numberOfCharacters: number,
-        numberOfWords: number,
-        instagramCharactersLeft: number,
-        facebookCharactersLeft: number
-    }
+type StatsProps = {
+    numberOfCharacters: number,
+    numberOfWords: number,
+    instagramCharactersLeft: number,
+    facebookCharactersLeft: number
 }
 
 function Stat({ count, label: name }: StatProps) {
@@ -22,13 +20,12 @@ function Stat({ count, label: name }: StatProps) {
     )
 }
 
-export default function Stats({ stats }: IStatsProps) {
-
-    const {
-        numberOfCharacters,
-        numberOfWords,
-        instagramCharactersLeft,
-        facebookCharactersLeft } = stats
+export default function Stats({
+    numberOfCharacters,
+    numberOfWords,
+    instagramCharactersLeft,
+    facebookCharactersLeft }: StatsProps) {
+    console.log(numberOfCharacters);
 
     return (
         <section className="stats">
